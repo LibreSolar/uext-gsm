@@ -1,0 +1,30 @@
+Component,Description,Part,References,Value,Footprint,Quantity Per PCB,Datasheet,Remarks,PartNumber,Manufacturer,DNP
+1,Unpolarized capacitor,C,C1,10uF,C_0805_2012,1,,Alternative: TDK C2012X5R1E106K085AC,GRM21BC71E106KE11L,Murata,
+2,Unpolarized capacitor,C,C2,2.2n,C_0603_1608,1,,"minimum 10V, X5R",885012206085,Würth,
+3,Unpolarized capacitor,C,C3 C4,22uF,C_0805_2012,2,,"minimum 10V, X5R",LMK212BBJ226MG-T,Tayo Yuden,
+4,Diode Schottky,D_Schottky,D1,RSX051VAM30TR,D_TUMD2,1,,,RSX051VAM30TR,ROHM,
+5,"Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)",Conn_01x02_Male,J1,Conn_01x02_Male,JST_XH_B02B-XH-A_1x02_P2.50mm_Vertical,1,~,,,,X
+6,,UEXT,J2,UEXT,PinSocket_2x05_P2.54mm_Vertical,1,http://wppro.com/content/de/produkte/buchsenleisten/raster-2_54mm/product/157b.pdf,,157B-05-2-00,W+P,
+7,Inductor,L,L1,2.2uH,L_Coilcraft_XxL4020,1,,,XFL4020-222,Coilcraft,
+8,,LibreSolar_Logo,LOGO1,LibreSolar_Logo,LIBRESOLAR_LOGO,1,,,,,X
+9,Transistor N-MOSFETwith substrate diode (general),Q_NMOS_GSD,Q1,DMN3023L-7,SOT-23,1,,,DMN3023L-7,Diodes Incorporated,
+10,Resistor,R,R4,0R,R_0603_1608,1,,,,,X
+11,Resistor,R,R1 R3,100k,R_0603_1608,2,,,RC0603FR-07100KL,Yageo,
+12,Resistor,R,R2,499k,R_0603_1608,1,,,RC0603FR-07499KL,Yageo,
+13,,SIM800L,U1,SIM800L,Sim800L,1,,,,,
+14,"3A Step-Down Converter with DCS-Control, Adjustable Output Voltage, 3-17V Input Voltage, QFN-16",TPS62147,U2,TPS62147,VQFN_RGX0011A,1,http://www.ti.com/lit/ds/symlink/tps62130.pdf,,TPS62147RGXR,Texas Instruments,
+
+
+
+
+
+Component Groups:,14
+Component Count:,16
+Fitted Components:,16
+Number of PCBs:,1
+Total components:,16
+Schematic Version:,0.1
+Schematic Date:,2018-10-24
+BoM Date:,Do 25 Okt 2018 14:22:35 CEST
+Schematic Source:,/home/martin/LibreSolar/2_Development/04_Hardware/UEXT_GSM/UEXT_GSM.sch
+KiCad Version:,Eeschema 5.0.0

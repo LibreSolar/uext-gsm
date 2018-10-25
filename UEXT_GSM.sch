@@ -1,0 +1,563 @@
+EESchema Schematic File Version 4
+LIBS:UEXT_GSM-cache
+EELAYER 26 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title "SIM800L to UEXT Adapter"
+Date "2018-10-24"
+Rev "0.1"
+Comp "Connected Energy Ltd."
+Comment1 "Author: Jordan Silverman, Martin Jäger"
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L LibreSolar:C C3
+U 1 1 5BD09058
+P 7100 2300
+F 0 "C3" H 7192 2346 50  0000 L CNN
+F 1 "22uF" H 7192 2255 50  0000 L CNN
+F 2 "LibreSolar:C_0805_2012" H 7100 2100 50  0001 C CNN
+F 3 "" H 7125 2375 50  0000 C CNN
+F 4 "Tayo Yuden" H 7100 2300 50  0001 C CNN "Manufacturer"
+F 5 "LMK212BBJ226MG-T" H 7100 2300 50  0001 C CNN "PartNumber"
+F 6 "minimum 10V, X5R" H 7100 2300 50  0001 C CNN "Remarks"
+	1    7100 2300
+	1    0    0    -1  
+$EndComp
+$Comp
+L LibreSolar:C C2
+U 1 1 5BD090EE
+P 4500 2400
+F 0 "C2" H 4592 2446 50  0000 L CNN
+F 1 "2.2n" H 4592 2355 50  0000 L CNN
+F 2 "LibreSolar:C_0603_1608" H 4500 2200 50  0001 C CNN
+F 3 "" H 4525 2475 50  0000 C CNN
+F 4 "Würth" H 0   0   50  0001 C CNN "Manufacturer"
+F 5 "885012206085" H 0   0   50  0001 C CNN "PartNumber"
+F 6 "minimum 10V, X5R" H 0   0   50  0001 C CNN "Remarks"
+	1    4500 2400
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR04
+U 1 1 5BD0937B
+P 7800 4900
+F 0 "#PWR04" H 7800 4650 50  0001 C CNN
+F 1 "GND" H 7805 4727 50  0000 C CNN
+F 2 "" H 7800 4900 50  0001 C CNN
+F 3 "" H 7800 4900 50  0001 C CNN
+	1    7800 4900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3250 4700 3050 4700
+Wire Wire Line
+	3050 4700 3050 4600
+$Comp
+L power:+3V3 #PWR08
+U 1 1 5BD09B68
+P 3050 4600
+F 0 "#PWR08" H 3050 4450 50  0001 C CNN
+F 1 "+3V3" H 3065 4773 50  0000 C CNN
+F 2 "" H 3050 4600 50  0001 C CNN
+F 3 "" H 3050 4600 50  0001 C CNN
+	1    3050 4600
+	1    0    0    -1  
+$EndComp
+NoConn ~ 4050 4900
+NoConn ~ 3250 4900
+$Comp
+L power:GND #PWR03
+U 1 1 5BD0A3E5
+P 7100 2700
+F 0 "#PWR03" H 7100 2450 50  0001 C CNN
+F 1 "GND" H 7105 2527 50  0000 C CNN
+F 2 "" H 7100 2700 50  0001 C CNN
+F 3 "" H 7100 2700 50  0001 C CNN
+	1    7100 2700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7100 1900 7100 2200
+Wire Wire Line
+	7100 2400 7100 2700
+$Comp
+L LibreSolar:UEXT J2
+U 1 1 5BD08A45
+P 3650 4900
+F 0 "J2" H 3650 5365 50  0000 C CNN
+F 1 "UEXT" H 3650 5274 50  0000 C CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_2x05_P2.54mm_Vertical" H 3650 4500 50  0001 C CIN
+F 3 "http://wppro.com/content/de/produkte/buchsenleisten/raster-2_54mm/product/157b.pdf" H 3650 4800 60  0001 C CNN
+F 4 "W+P" H 3650 4900 50  0001 C CNN "Manufacturer"
+F 5 "157B-05-2-00" H 3650 4900 50  0001 C CNN "PartNumber"
+	1    3650 4900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Project:SIM800L U1
+U 1 1 5BD0A431
+P 8500 4600
+F 0 "U1" H 8500 5187 60  0000 C CNN
+F 1 "SIM800L" H 8500 5081 60  0000 C CNN
+F 2 "LibreSolar:Sim800L" H 8800 4450 60  0001 C CNN
+F 3 "" H 8800 4450 60  0001 C CNN
+	1    8500 4600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7900 4800 7800 4800
+Wire Wire Line
+	7800 4800 7800 4900
+$Comp
+L power:VCC #PWR0101
+U 1 1 5BD0C904
+P 7800 4300
+F 0 "#PWR0101" H 7800 4150 50  0001 C CNN
+F 1 "VCC" H 7817 4473 50  0000 C CNN
+F 2 "" H 7800 4300 50  0001 C CNN
+F 3 "" H 7800 4300 50  0001 C CNN
+	1    7800 4300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7900 4400 7800 4400
+Wire Wire Line
+	7800 4400 7800 4300
+Wire Wire Line
+	7900 4600 7400 4600
+Wire Wire Line
+	7900 4700 7400 4700
+Text Label 7400 4600 0    50   ~ 0
+UEXT_TX
+Text Label 7400 4700 0    50   ~ 0
+UEXT_RX
+Wire Wire Line
+	3250 4800 2850 4800
+Wire Wire Line
+	4050 4800 4450 4800
+Text Label 2850 4800 0    50   ~ 0
+UEXT_TX
+Text Label 4450 4800 2    50   ~ 0
+UEXT_RX
+$Comp
+L LibreSolar:TPS62147 U2
+U 1 1 5BD1143C
+P 5600 2200
+F 0 "U2" H 5600 2767 50  0000 C CNN
+F 1 "TPS62147" H 5600 2676 50  0000 C CNN
+F 2 "LibreSolar:VQFN_RGX0011A" H 5750 1750 50  0001 L CNN
+F 3 "" H 5600 2200 50  0001 C CNN
+F 4 "Texas Instruments" H 5600 2200 50  0001 C CNN "Manufacturer"
+F 5 "TPS62147RGXR" H 5600 2200 50  0001 C CNN "PartNumber"
+	1    5600 2200
+	1    0    0    -1  
+$EndComp
+$Comp
+L LibreSolar:L L1
+U 1 1 5BD11527
+P 6300 1900
+F 0 "L1" H 6300 2000 50  0000 C CNN
+F 1 "2.2uH" H 6300 1850 50  0000 C CNN
+F 2 "Inductor_SMD:L_Coilcraft_XxL4020" H 6200 1870 50  0001 C CNN
+F 3 "" H 6300 1970 50  0001 C CNN
+F 4 "Coilcraft" H 0   0   50  0001 C CNN "Manufacturer"
+F 5 "XFL4020-222" H 0   0   50  0001 C CNN "PartNumber"
+	1    6300 1900
+	1    0    0    -1  
+$EndComp
+$Comp
+L LibreSolar:R R1
+U 1 1 5BD1168C
+P 2550 4800
+F 0 "R1" V 2450 4800 50  0000 C CNN
+F 1 "100k" V 2650 4800 50  0000 C CNN
+F 2 "LibreSolar:R_0603_1608" V 2375 4700 50  0001 C CNN
+F 3 "" H 2550 4800 50  0000 C CNN
+F 4 "Yageo" H 0   0   50  0001 C CNN "Manufacturer"
+F 5 "RC0603FR-07100KL" H 0   0   50  0001 C CNN "PartNumber"
+	1    2550 4800
+	-1   0    0    1   
+$EndComp
+$Comp
+L LibreSolar:R R2
+U 1 1 5BD119FA
+P 6800 2100
+F 0 "R2" V 6725 2100 50  0000 C CNN
+F 1 "499k" V 6875 2100 50  0000 C CNN
+F 2 "LibreSolar:R_0603_1608" V 6625 2000 50  0001 C CNN
+F 3 "" H 6800 2100 50  0000 C CNN
+F 4 "Yageo" H 0   0   50  0001 C CNN "Manufacturer"
+F 5 "RC0603FR-07499KL" H 0   0   50  0001 C CNN "PartNumber"
+	1    6800 2100
+	1    0    0    -1  
+$EndComp
+$Comp
+L LibreSolar:R R3
+U 1 1 5BD11A68
+P 6800 2500
+F 0 "R3" V 6725 2500 50  0000 C CNN
+F 1 "100k" V 6875 2500 50  0000 C CNN
+F 2 "LibreSolar:R_0603_1608" V 6625 2400 50  0001 C CNN
+F 3 "" H 6800 2500 50  0000 C CNN
+F 4 "Yageo" H 0   0   50  0001 C CNN "Manufacturer"
+F 5 "RC0603FR-07100KL" H 0   0   50  0001 C CNN "PartNumber"
+	1    6800 2500
+	1    0    0    -1  
+$EndComp
+$Comp
+L LibreSolar:C C4
+U 1 1 5BD12141
+P 7500 2300
+F 0 "C4" H 7592 2346 50  0000 L CNN
+F 1 "22uF" H 7592 2255 50  0000 L CNN
+F 2 "LibreSolar:C_0805_2012" H 7500 2100 50  0001 C CNN
+F 3 "" H 7525 2375 50  0000 C CNN
+F 4 "Tayo Yuden" H 0   0   50  0001 C CNN "Manufacturer"
+F 5 "LMK212BBJ226MG-T" H 0   0   50  0001 C CNN "PartNumber"
+F 6 "minimum 10V, X5R" H 0   0   50  0001 C CNN "Remarks"
+	1    7500 2300
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0102
+U 1 1 5BD12147
+P 7500 2700
+F 0 "#PWR0102" H 7500 2450 50  0001 C CNN
+F 1 "GND" H 7505 2527 50  0000 C CNN
+F 2 "" H 7500 2700 50  0001 C CNN
+F 3 "" H 7500 2700 50  0001 C CNN
+	1    7500 2700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7500 1900 7500 2200
+Wire Wire Line
+	7500 2400 7500 2700
+$Comp
+L power:GND #PWR0103
+U 1 1 5BD123B3
+P 6800 2700
+F 0 "#PWR0103" H 6800 2450 50  0001 C CNN
+F 1 "GND" H 6805 2527 50  0000 C CNN
+F 2 "" H 6800 2700 50  0001 C CNN
+F 3 "" H 6800 2700 50  0001 C CNN
+	1    6800 2700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6000 1900 6200 1900
+Wire Wire Line
+	6400 1900 6600 1900
+Wire Wire Line
+	6800 1900 6800 2000
+Wire Wire Line
+	6800 2200 6800 2300
+Wire Wire Line
+	6800 2600 6800 2700
+Connection ~ 6800 2300
+Wire Wire Line
+	6800 2300 6800 2400
+Wire Wire Line
+	6000 2200 6600 2200
+Wire Wire Line
+	6600 2200 6600 1900
+Connection ~ 6600 1900
+Wire Wire Line
+	6600 1900 6800 1900
+Wire Wire Line
+	6800 1900 7100 1900
+Connection ~ 6800 1900
+Wire Wire Line
+	7100 1900 7500 1900
+Connection ~ 7100 1900
+Wire Wire Line
+	6000 2300 6800 2300
+Wire Wire Line
+	6000 2400 6400 2400
+Text Label 6400 2400 2    50   ~ 0
+PG
+$Comp
+L LibreSolar:C C1
+U 1 1 5BD186F3
+P 4100 2200
+F 0 "C1" H 4192 2246 50  0000 L CNN
+F 1 "10uF" H 4192 2155 50  0000 L CNN
+F 2 "LibreSolar:C_0805_2012" H 4100 2000 50  0001 C CNN
+F 3 "" H 4125 2275 50  0000 C CNN
+F 4 "Murata" H 4100 2200 50  0001 C CNN "Manufacturer"
+F 5 "GRM21BC71E106KE11L" H 4100 2200 50  0001 C CNN "PartNumber"
+F 6 "Alternative: TDK C2012X5R1E106K085AC" H 4100 2200 50  0001 C CNN "Remarks"
+	1    4100 2200
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0104
+U 1 1 5BD186F9
+P 4100 2700
+F 0 "#PWR0104" H 4100 2450 50  0001 C CNN
+F 1 "GND" H 4105 2527 50  0000 C CNN
+F 2 "" H 4100 2700 50  0001 C CNN
+F 3 "" H 4100 2700 50  0001 C CNN
+	1    4100 2700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4100 2300 4100 2700
+Wire Wire Line
+	5200 1900 4100 1900
+Wire Wire Line
+	4100 1900 4100 2100
+Wire Wire Line
+	4100 1900 3900 1900
+Connection ~ 4100 1900
+Text GLabel 3800 1900 0    50   Input ~ 0
+VBAT
+$Comp
+L power:GND #PWR0105
+U 1 1 5BD1A7C9
+P 4500 2700
+F 0 "#PWR0105" H 4500 2450 50  0001 C CNN
+F 1 "GND" H 4505 2527 50  0000 C CNN
+F 2 "" H 4500 2700 50  0001 C CNN
+F 3 "" H 4500 2700 50  0001 C CNN
+	1    4500 2700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5200 2200 4500 2200
+Wire Wire Line
+	4500 2200 4500 2300
+Wire Wire Line
+	4500 2500 4500 2700
+Wire Wire Line
+	5200 2100 4800 2100
+Text Label 4800 2100 0    50   ~ 0
+EN
+$Comp
+L power:GND #PWR0106
+U 1 1 5BD1BEA1
+P 5100 2700
+F 0 "#PWR0106" H 5100 2450 50  0001 C CNN
+F 1 "GND" H 5105 2527 50  0000 C CNN
+F 2 "" H 5100 2700 50  0001 C CNN
+F 3 "" H 5100 2700 50  0001 C CNN
+	1    5100 2700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5200 2300 5100 2300
+Wire Wire Line
+	5100 2300 5100 2400
+Wire Wire Line
+	5200 2400 5100 2400
+Connection ~ 5100 2400
+Wire Wire Line
+	5100 2400 5100 2700
+$Comp
+L power:GND #PWR0107
+U 1 1 5BD1CDC7
+P 5700 2900
+F 0 "#PWR0107" H 5700 2650 50  0001 C CNN
+F 1 "GND" H 5705 2727 50  0000 C CNN
+F 2 "" H 5700 2900 50  0001 C CNN
+F 3 "" H 5700 2900 50  0001 C CNN
+	1    5700 2900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5600 2700 5600 2800
+Wire Wire Line
+	5600 2800 5700 2800
+Wire Wire Line
+	5700 2800 5700 2700
+Wire Wire Line
+	5700 2800 5700 2900
+Connection ~ 5700 2800
+Wire Wire Line
+	7500 1900 7800 1900
+Connection ~ 7500 1900
+$Comp
+L power:VCC #PWR0108
+U 1 1 5BD1EA2D
+P 7800 1800
+F 0 "#PWR0108" H 7800 1650 50  0001 C CNN
+F 1 "VCC" H 7817 1973 50  0000 C CNN
+F 2 "" H 7800 1800 50  0001 C CNN
+F 3 "" H 7800 1800 50  0001 C CNN
+	1    7800 1800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7800 1900 7800 1800
+$Comp
+L Connector:Conn_01x02_Male J1
+U 1 1 5BD1F4D5
+P 1800 2300
+F 0 "J1" H 1906 2478 50  0000 C CNN
+F 1 "Conn_01x02_Male" H 1906 2387 50  0000 C CNN
+F 2 "Connector_JST:JST_XH_B02B-XH-A_1x02_P2.50mm_Vertical" H 1800 2300 50  0001 C CNN
+F 3 "~" H 1800 2300 50  0001 C CNN
+F 4 "X" H 0   0   50  0001 C CNN "DNP"
+	1    1800 2300
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0109
+U 1 1 5BD1F6A7
+P 3300 2800
+F 0 "#PWR0109" H 3300 2550 50  0001 C CNN
+F 1 "GND" H 3305 2627 50  0000 C CNN
+F 2 "" H 3300 2800 50  0001 C CNN
+F 3 "" H 3300 2800 50  0001 C CNN
+	1    3300 2800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3900 2300 3900 1900
+Connection ~ 3900 1900
+Wire Wire Line
+	3900 1900 3800 1900
+Wire Wire Line
+	2000 2300 2900 2300
+Wire Wire Line
+	3250 5000 2550 5000
+Wire Wire Line
+	4050 5000 4450 5000
+Text Label 2250 5000 0    50   ~ 0
+PG
+Text Label 4450 5000 2    50   ~ 0
+EN
+NoConn ~ 4050 5100
+NoConn ~ 3250 5100
+$Comp
+L power:+3V3 #PWR0110
+U 1 1 5BD270DF
+P 2550 4600
+F 0 "#PWR0110" H 2550 4450 50  0001 C CNN
+F 1 "+3V3" H 2565 4773 50  0000 C CNN
+F 2 "" H 2550 4600 50  0001 C CNN
+F 3 "" H 2550 4600 50  0001 C CNN
+	1    2550 4600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2550 4600 2550 4700
+Wire Wire Line
+	2550 4900 2550 5000
+Connection ~ 2550 5000
+Wire Wire Line
+	2550 5000 2250 5000
+$Comp
+L LibreSolar:LibreSolar_Logo LOGO1
+U 1 1 5BD29360
+P 5400 7200
+F 0 "LOGO1" H 5770 7270 50  0000 L CNN
+F 1 "LibreSolar_Logo" H 5770 7179 50  0000 L CNN
+F 2 "LibreSolar:LIBRESOLAR_LOGO" H 5420 7190 60  0001 C CNN
+F 3 "" H 5420 7190 60  0001 C CNN
+F 4 "X" H 0   0   50  0001 C CNN "DNP"
+	1    5400 7200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Graphic:Logo_Open_Hardware_Small #LOGO1
+U 1 1 5BD294D8
+P 4550 7200
+F 0 "#LOGO1" H 4550 7475 50  0001 C CNN
+F 1 "Logo_Open_Hardware_Small" H 4550 6975 50  0001 C CNN
+F 2 "Symbol:OSHW-Logo_5.7x6mm_SilkScreen" H 4550 7200 50  0001 C CNN
+F 3 "~" H 4550 7200 50  0001 C CNN
+	1    4550 7200
+	1    0    0    -1  
+$EndComp
+$Comp
+L LibreSolar:R R4
+U 1 1 5BD2A056
+P 4650 4700
+F 0 "R4" V 4550 4700 50  0000 C CNN
+F 1 "0R" V 4750 4700 50  0000 C CNN
+F 2 "LibreSolar:R_0603_1608" V 4475 4600 50  0001 C CNN
+F 3 "" H 4650 4700 50  0000 C CNN
+F 4 "X" V 4650 4700 250 0000 C CNN "DNP"
+	1    4650 4700
+	0    -1   1    0   
+$EndComp
+$Comp
+L power:GND #PWR01
+U 1 1 5BD2B01C
+P 4850 4800
+F 0 "#PWR01" H 4850 4550 50  0001 C CNN
+F 1 "GND" H 4855 4627 50  0000 C CNN
+F 2 "" H 4850 4800 50  0001 C CNN
+F 3 "" H 4850 4800 50  0001 C CNN
+	1    4850 4800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4750 4700 4850 4700
+Wire Wire Line
+	4850 4700 4850 4800
+Wire Wire Line
+	4550 4700 4050 4700
+NoConn ~ 9100 4400
+NoConn ~ 9100 4500
+NoConn ~ 9100 4600
+NoConn ~ 9100 4700
+NoConn ~ 9100 4800
+NoConn ~ 9100 4900
+NoConn ~ 7900 4500
+Text Notes 8100 1850 0    50   ~ 0
+SIM800L needs 4.2V output, 2A peak
+Text Notes 2150 1850 0    50   ~ 0
+Input can be 5V or 12V battery\n(with reverse polarity protection)
+Text Notes 4350 4350 0    50   ~ 0
+GND connected via \npower cable already
+$Comp
+L Device:Q_NMOS_GSD Q1
+U 1 1 5BD174F6
+P 2900 2600
+F 0 "Q1" V 3150 2600 50  0000 C CNN
+F 1 "DMN3023L-7" V 3241 2600 50  0000 C CNN
+F 2 "LibreSolar:SOT-23" H 3100 2700 50  0001 C CNN
+F 3 "" H 2900 2600 50  0001 C CNN
+F 4 "Diodes Incorporated" H 2900 2600 50  0001 C CNN "Manufacturer"
+F 5 "DMN3023L-7" H 2900 2600 50  0001 C CNN "PartNumber"
+	1    2900 2600
+	0    -1   1    0   
+$EndComp
+Wire Wire Line
+	2900 2300 2900 2400
+Connection ~ 2900 2300
+Wire Wire Line
+	2900 2300 3300 2300
+Wire Wire Line
+	2700 2700 2300 2700
+Wire Wire Line
+	2300 2700 2300 2400
+Wire Wire Line
+	2300 2400 2000 2400
+Wire Wire Line
+	3300 2800 3300 2700
+Wire Wire Line
+	3300 2700 3100 2700
+$Comp
+L LibreSolar:D_Schottky D1
+U 1 1 5BD21853
+P 3400 2300
+F 0 "D1" H 3400 2084 50  0000 C CNN
+F 1 "RSX051VAM30TR" H 3400 2175 50  0000 C CNN
+F 2 "Diode_SMD:D_TUMD2" H 3400 2176 50  0001 C CNN
+F 3 "" V 3400 2300 50  0000 C CNN
+F 4 "ROHM" H 3400 2300 50  0001 C CNN "Manufacturer"
+F 5 "RSX051VAM30TR" H 3400 2300 50  0001 C CNN "PartNumber"
+	1    3400 2300
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	3500 2300 3900 2300
+$EndSCHEMATC
